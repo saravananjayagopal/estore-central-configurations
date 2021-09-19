@@ -16,8 +16,4 @@ spring:
     name: estore-order-mgmt-service
   profiles:
     active: development
-  datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url : jdbc:mysql://localhost:3306/book_order
-    username : root
-    password : root
+  
