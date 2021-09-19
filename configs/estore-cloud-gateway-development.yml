@@ -1,0 +1,29 @@
+
+server:
+   port: 8080
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: estore-cloud-gateway
+  cloud:
+    config:
+       uri:lb://ESTORE-CENTRAL-CONFIG
+    gateway:
+       routes:
+        - id : stockModule
+          uri : lb://ESTORE-STOCK-MGMT-SERVICE
+          predicates : 
+           - Path=/stock/**
+        - id : orderModule
+          uri : lb://ESTORE-ORDER-MGMT-SERVICE
+          predicates :
+            - Path=/order/**
+        - id : bookModule
+          uri : lb://ESTORE-BOOK-MGMT-SERVICE
+          predicates :
+            - Path=/book/**
