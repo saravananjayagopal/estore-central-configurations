@@ -15,5 +15,5 @@ spring:
   application:
     name: estore-order-mgmt-service
   profiles:
-    active: development
+     active : development
   
