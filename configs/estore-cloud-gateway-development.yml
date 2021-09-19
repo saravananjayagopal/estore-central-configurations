@@ -6,15 +6,19 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
-
+      
+logging:
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+    
 spring:
   application:
     name: estore-cloud-gateway
   cloud:
-    discovery:
-        locator:
-          enabled: true
     gateway:
+       discovery:
+         locator:
+          enabled: true
        routes:
         - id : stockModule
           uri : lb://ESTORE-STOCK-MGMT-SERVICE
