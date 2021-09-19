@@ -11,8 +11,9 @@ spring:
   application:
     name: estore-cloud-gateway
   cloud:
-    config:
-       uri:lb://ESTORE-CENTRAL-CONFIG
+    discovery:
+        locator:
+          enabled: true
     gateway:
        routes:
         - id : stockModule
