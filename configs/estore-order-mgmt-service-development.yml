@@ -11,4 +11,13 @@ logging:
   pattern: 
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
     
-
+spring:
+  application:
+    name: estore-order-mgmt-service
+  profiles:
+    active: development
+  datasource:
+    driverClassName: "com.mysql.cj.jdbc.Driver"
+    url : jdbc:mysql://localhost:3306/book_order
+    username : root
+    password : root
