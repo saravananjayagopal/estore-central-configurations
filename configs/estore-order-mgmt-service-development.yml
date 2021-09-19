@@ -4,9 +4,8 @@ server:
 
 spring:
   application:
-      name: estore-cloud-gateway
-  profiles:
-      active : development
+      name: estore-order-mgmt-service
+  
       
 eureka:
   client:
