@@ -5,10 +5,7 @@ server:
 spring:
    application:
      name : estore-service-registry
-   cloud:
-      config:
-        uri : http://localhost:8888
-
+   
 eureka:
   instance:
     hostname: localhost
