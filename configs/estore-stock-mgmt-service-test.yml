@@ -1,1 +1,26 @@
-book_stock
+
+server:
+   port: 9082
+   servlet:
+     context-path: /stock
+spring:
+  application:
+      name: estore-order-mgmt-service
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url : jdbc:mysql://localhost:3306/book_stock
+    username : root
+    password : root
+  
+      
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9761/eureka
+    
+logging:
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+
+  
