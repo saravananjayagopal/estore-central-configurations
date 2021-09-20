@@ -1,0 +1,27 @@
+
+server:
+   port: 9081
+   servlet:
+     context-path: /order
+spring:
+  application:
+      name: estore-order-mgmt-service
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url : jdbc:mysql://localhost:3306/book_order
+    username : root
+    password : root
+  
+      
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    
+logging:
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+
+  
+© 2021 GitHub, Inc.
