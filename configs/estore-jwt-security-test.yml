@@ -1,0 +1,21 @@
+
+server:
+   port: 9085
+   
+spring:
+  application:
+      name: estore-jwt-security
+       
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9761/eureka
+jwt:
+  secret : estore
+  get :
+    token :
+       uri : /authenticate   
+       
+logging:
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
